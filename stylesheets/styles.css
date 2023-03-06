@@ -14,15 +14,24 @@
 
 /* ---- Module Rules ---- */
 
-#navbar__list div 
-{
-    display: grid;
-    grid-auto-rows: minmax(2em, auto);
-    grid-template-columns: repeat(auto-fill, 7.5em); /* Creates as many columns as necessary */
+            #navbar__list div 
+            {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                grid-auto-rows: minmax(3em, auto);
+                grid-template-columns: repeat(auto-fill, 7.5em); /* Creates as many columns as necessary */
+                
+                direction: rtl;
+            
+            }
 
-    flex-direction: row-reverse;
-   
-}
+            #navbar__list div * 
+            {
+
+                direction: ltr;
+            
+            }
 
 
     /* Navigation Styles*/
