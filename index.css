@@ -1,0 +1,87 @@
+@import "stylesheets/styles.css";
+
+/*Importing Google Font*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap');
+/*Importing Google Font*/
+
+
+/**************************************************/
+/********** -------- CSS RESETS -------- **********/
+/**************************************************/
+
+* { /* Universal Selector with zero specificity */
+
+    /* reseting the box model */
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    /* reseting the box model */
+	
+    /* reseting the typography */
+	font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    /* reseting the typography */
+}
+
+
+/**************************************************/
+/********** -------- BASE RULES -------- **********/
+/**************************************************/
+
+body {
+    background: rgb(136,203,171);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+}
+
+
+    /* Typography General */
+    h1 {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 3em;
+        margin: 2em 1rem;
+    }
+
+    @media only screen and (min-width: 35em){
+        h1 {
+            font-size: 7em;
+            margin: 2em 4rem 1em;
+        }
+    }
+
+    h2 {
+        border-bottom: 1px solid #cc1;
+        font-family: 'Oxygen', Sans-Serif;
+        font-size: 3em;
+        color: #fff;
+    }
+
+    p {
+        line-height: 1.6em;
+        color: #eee;
+    }
+
+
+/**************************************************/
+/********* -------- LAYOUT RULES -------- *********/
+/**************************************************/
+
+    main {
+        margin: 10vh 1em 10vh;
+    }
+
+    .main-hero {
+        min-height: 40vh;
+        padding-top: 3em;
+    }
+
+    section {
+        position: relative;
+        min-height: 80vh;
+    }
