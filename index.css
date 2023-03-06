@@ -76,7 +76,7 @@ body {
         margin: 10vh 1em 10vh;
     }
 
-    .main-hero {
+    .main__hero {
         min-height: 40vh;
         padding-top: 3em;
     }
