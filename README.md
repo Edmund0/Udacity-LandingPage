@@ -1,17 +1,24 @@
 # Landing Page Project
 
+
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [Purpose](#Purpose)
+* [Languages_Used](#Languages_Used)
+* [License](#License)
 
-## Instructions
+### Purpose
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+This project is a multi-section landing page. It includes a dynamically built navigation bar. Thus, whenever a new section is added to the page, the navigation updates itself (using the data provided in each section). 
 
-To get started, open `js/app.js` and start building out the app's functionality
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+### Languages_Used
 
-## Comments
+The primary language used in this project is JavaScript. There is also modified HTML5 and CSS3 code. 
 
-The project has been adapted and refactor in a way I understand. The project makes use native javaScript code.
+
+### Licence
+
+The project was adapated from the starter project provided by Udacity. The original code was refactord simply refactored.
+
+Copyright © 2012 - 2020, Udacity, Inc.

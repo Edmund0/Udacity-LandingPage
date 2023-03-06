@@ -50,7 +50,7 @@
         transition: ease 0.3s all;
     }
 
-    .active-menu {
+    .navbar__menu .active-menu {
         background: #333;
         color: #fff;
         transition: ease 0.3s all;
