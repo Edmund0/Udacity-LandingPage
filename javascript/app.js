@@ -79,7 +79,7 @@
         const inView = (content) => {
 
             const {top, bottom} = content.getBoundingClientRect();
-            const logic = (top >= 0) || ((top <= 0) && bottom >=0);
+            const logic = (top >= 0) || ((top <= 0) && bottom >= (window.innerHeight)/2.5);
             return logic;
 
         }
@@ -102,6 +102,33 @@
             }
 
         }
+
+        /* This code highlights the corresponding item in the menu */
+        const makeActiveNavigation = (menuList) => {
+
+            /* This for loop removes the class from all section element */
+            for (const menu of menuList) 
+            {
+                    menu.classList.remove('active-menu');
+            }
+
+            /* This for loop adds the class to the first element that it finds */
+            for (const menu of menuList) 
+            {
+                let identity = menu.getAttribute('href');
+                    identity = identity.substring(1);
+
+                content = document.querySelector(`[id="${identity}"]`);
+
+                if (inView(content)) {
+                    menu.classList.add('active-menu');
+                    break;
+                } 
+            }
+
+        }
+
+
 
         /*********************************************************************************************************/
         /* These functions add the 'active' class to the section tag in view || and remove it from all other tags*/
@@ -177,6 +204,8 @@
             window.addEventListener('scroll', () => {
         
                 makeActive(navigationData);
+                const navMenu = document.querySelectorAll('.menu__link');
+                makeActiveNavigation(navMenu);
     
             })
             /* I'm sure there is a better way to do this :{ */
