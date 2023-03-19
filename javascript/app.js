@@ -130,9 +130,9 @@
 
 
 
-        /*********************************************************************************************************/
-        /* These functions add the 'active' class to the section tag in view || and remove it from all other tags*/
-        /*********************************************************************************************************/
+        /***************************************************************/
+        /* These functions scroll to the individual page upon clicking */
+        /***************************************************************/
 
         const scrollOnClick = (event, anchorLink) => {
 
@@ -140,12 +140,20 @@
 
             let reference = anchorLink.getAttribute('href');
             let anchorTarget = document.querySelector(reference);
-            
+             
             anchorTarget.scrollIntoView({
                 behavior: 'smooth',
                 block: 'nearest',
-                inline: 'start'
+                inline: 'center'
             })
+
+            /* RESPONSIVE CODE MODIFICATION - ScrollIntoView does not have an Offset; Mobile Screens has some of the */
+            let offsetHeader = document.querySelector('.page__header').offsetHeight;
+            window.scrollTo({
+                behavior: 'smooth',
+                top:
+                  document.querySelector(reference).getBoundingClientRect().top - document.body.getBoundingClientRect().top - offsetHeader,
+              })
 
         }
 
@@ -195,7 +203,7 @@
             for (const anchorLink of anchorLinks) { 
                 anchorLink.addEventListener('click', (event) => scrollOnClick(event, anchorLink));
             }
-            /* This code must be in the event listener otherwiser anchorLinks would be empty */
+            /* This code must be in the load event listener otherwiser anchorLinks would be empty */
     
 
 
